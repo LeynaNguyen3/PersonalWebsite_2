@@ -10,7 +10,7 @@ const Intro = () => {
             <span className="hello">Hello,</span>
             <span className="introText"><p className="gradient-element"/>I'm <span className="introName">Leyna</span><br />UCI C.S. Student</span>
             <div className="introParaContainer">
-              <p className="introPara">I have a passion for learning and am a well-rounded individual<br /> always looking to sharpen my skills.</p>
+              <p className="introPara"> with plans to graduate around December 2025. I have a passion for learning <br/> and am a well-rounded individual always looking to sharpen my skills.</p>
               <div className="gradient-underlay" />
             </div>
             <Link to='skills' spy={true} smooth={true} offset={-100} duration={500}><button className="btn"  onClick={() => {

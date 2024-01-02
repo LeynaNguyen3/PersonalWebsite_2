@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import './contact.css';
 import GitHubIcon from '../../assets/Tools.png';
 import GMailIcon from '../../assets/gmail.png';
+import linkedInIcon from '../../assets/linkedin.png'
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -34,6 +35,9 @@ const sendEmail = (e) => {
                 </a>
                 <a href="mailto:leyna.nguyen619@gmail.com" target="_blank" rel="noopener noreferrer">
                     <img src={GMailIcon} alt="Gmail" className="link" />
+                </a>
+                <a href="https://www.linkedin.com/in/leynanguyen3/" target="_blank" rel="noopener noreferrer">
+                    <img src={linkedInIcon} alt="LinkedIn" className="link" />
                 </a>
                 </div>
             </form>

@@ -7,7 +7,11 @@ const Skills = () => {
   return (
     <section id='skills'>
         <span className="skillTitle">About Me</span>
-        <span className="skillDesc">This is going to be a placement sentence.This is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentenceThis is going to be a placement sentence.</span>
+        <span className="skillDesc">I am someone who is well-rounded and tenacious. I started my career off in freelance back in 2018 with photography and private tutoring. 
+        By 2020, I earned my NMLS license and pursued mortgage sales becoming a top loan officer within my first month on the floor. 
+        Taking a break in 2021, I bicycle toured down the coast of Washington and Oregon. 
+        After years of working, in 2022, I finally had to means to to pursue my original goal: a degree in Computer Science. 
+        I am so excited to have been accepted by UCI and to be in their prestigious School of Donald Bren!</span>
         <span className="skillTitle">Technical Skills</span>
         <div className="skillBars">
             <div className="skillBar">
