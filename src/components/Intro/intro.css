@@ -80,6 +80,7 @@
 
 @media screen and (max-width:480px){s
     .bg {
-        right: -20vw;
+        /* I don't want this to display at all in mobile devices */
+        display: none;
     }
 }

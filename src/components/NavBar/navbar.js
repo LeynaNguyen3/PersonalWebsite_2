@@ -9,7 +9,7 @@ const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <nav className="navbar">
-        <a href="/" className="home-link">
+        <a href='intro'className="home-link">
           <img src={logo} alt="logo" className='logo' />
         </a>
         <div className="desktopMenu">
