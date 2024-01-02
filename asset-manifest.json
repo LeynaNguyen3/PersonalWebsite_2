@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/PersonalWebsite_2/static/css/main.ecde6c47.css",
-    "main.js": "/PersonalWebsite_2/static/js/main.a631ad72.js",
+    "main.css": "/PersonalWebsite_2/static/css/main.f3c49ba1.css",
+    "main.js": "/PersonalWebsite_2/static/js/main.20f169a1.js",
     "static/media/image.png": "/PersonalWebsite_2/static/media/image.2246347b5c96e5cacab6.png",
+    "static/media/Leyna_Nguyen_Resume_2023.pdf": "/PersonalWebsite_2/static/media/Leyna_Nguyen_Resume_2023.5c232212b9c0f4d34e90.pdf",
     "static/media/Tools.png": "/PersonalWebsite_2/static/media/Tools.90d5f66d9ac577d91985.png",
     "static/media/logo.png": "/PersonalWebsite_2/static/media/logo.3e5a1c6600549cf76a1b.png",
+    "static/media/menu.png": "/PersonalWebsite_2/static/media/menu.6ece63b91f3e1017ee38.png",
     "static/media/portfolio-1.png": "/PersonalWebsite_2/static/media/portfolio-1.c4103c64494b79cf3b63.png",
     "static/media/programming_languages.png": "/PersonalWebsite_2/static/media/programming_languages.24a8f93854ab092f17a7.png",
     "static/media/gmail.png": "/PersonalWebsite_2/static/media/gmail.8fc21969c09d93565c9e.png",
     "index.html": "/PersonalWebsite_2/index.html",
-    "main.ecde6c47.css.map": "/PersonalWebsite_2/static/css/main.ecde6c47.css.map",
-    "main.a631ad72.js.map": "/PersonalWebsite_2/static/js/main.a631ad72.js.map"
+    "main.f3c49ba1.css.map": "/PersonalWebsite_2/static/css/main.f3c49ba1.css.map",
+    "main.20f169a1.js.map": "/PersonalWebsite_2/static/js/main.20f169a1.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecde6c47.css",
-    "static/js/main.a631ad72.js"
+    "static/css/main.f3c49ba1.css",
+    "static/js/main.20f169a1.js"
   ]
 }
