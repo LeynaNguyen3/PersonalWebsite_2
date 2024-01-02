@@ -8,7 +8,7 @@ const Works = () => {
         <h2 className="worksTitle">Projects</h2>
         <span className="worksDesc">Here are all my projects. Here are all my projects.Here are all my projects.Here are all my projects.Here are all my projects.Here are all my projects.Here are all my projects.Here are all my projects.</span>
         <div className="worksImgs"></div>
-        <a href="https://github.com/LeynaNguyen3" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/LeynaNguyen3/PersonalWebsite_2" target="_blank" rel="noopener noreferrer">
           <img src={Porfolio1} alt="First Project" className="worksImg" />
           <div className="overlay">
             <div className="text">This is the website you're currently viewing!</div>

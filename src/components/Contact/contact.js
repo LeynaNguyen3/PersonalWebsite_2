@@ -1,9 +1,7 @@
 import React, { useRef } from 'react';
 import './contact.css';
-import FacebookIcon from '../../assets/facebook-icon.png';
-import TwitterIcon from '../../assets/twitter.png';
-import YouTubeIcon from '../../assets/youtube.png';
-import InstagramIcon from '../../assets/instagram.png';
+import GitHubIcon from '../../assets/Tools.png';
+import GMailIcon from '../../assets/gmail.png';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -24,17 +22,19 @@ const sendEmail = (e) => {
     <section id="contactPage">
         <div id="contact">
             <h1 className="contactPageTitle">Contact Me</h1>
-            <span className="contactDesc">you can message me here</span>
+            <span className="contactDesc">You can message me here! <a href="mailto:leyna.nguyen619@gmail.com">Or email me here</a></span>
             <form className='contactForm' ref={form} onSubmit={sendEmail}>
                 <input type="text" className="name" name="your_name" placeholder='Your Name' />
                 <input type="email" className="email" name="your_email" placeholder='Your Email' />
                 <textarea className='msg' name="message" rows="5" placeholder='Your Message'></textarea>
                 <button type='submit' value='Send' className="submitBtn">Submit</button>
                 <div className="links">
-                    <img src={FacebookIcon} alt="Facebook" className="link" />
-                    <img src={TwitterIcon} alt="Twitter" className="link" />
-                    <img src={YouTubeIcon} alt="YouTube" className="link" />
-                    <img src={InstagramIcon} alt="Instagram" className="link" />
+                <a href="https://github.com/LeynaNguyen3" target="_blank" rel="noopener noreferrer">
+                    <img src={GitHubIcon} alt="GitHub" className="link" />
+                </a>
+                <a href="mailto:leyna.nguyen619@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <img src={GMailIcon} alt="Gmail" className="link" />
+                </a>
                 </div>
             </form>
         </div>

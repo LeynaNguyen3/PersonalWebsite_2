@@ -4,7 +4,7 @@ import './footer.css';
 const Footer = () => {
   return (
     <footer className='footer'>
-        Copyright &#169; 2023 Nguyen Leyna.
+        Copyright &#169; 2023 Nguyen, Leyna.
     </footer>
   );
 }
