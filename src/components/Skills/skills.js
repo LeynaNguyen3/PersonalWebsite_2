@@ -18,14 +18,14 @@ const Skills = () => {
                 <img src={ProgrammingLanguages} alt="UIDesign" className="skillBarImg" />
                 <div className="skillBarText">
                     <h2>Programming Languages</h2>
-                    <p>HTML, CSS, JavaScript, Java, C++, Python, MIPSzy</p>
+                    <p>HTML, CSS, JavaScript, Java, C++, Python, MIPSzy, React</p>
                 </div>
             </div>
             <div className="skillBar">
                 <img src={Tools} alt="WebDesign" className="skillBarImg" />
                 <div className="skillBarText">
                     <h2>Tools & FrameWorks</h2>
-                    <p> Git, GitLab, Catch2, NetBeans, VSCode, Tailwind CSS, React</p>
+                    <p> Git, GitLab, Catch2, NetBeans, VSCode, Node Package Manager</p>
                 </div>
             </div>
         </div>
@@ -33,13 +33,24 @@ const Skills = () => {
         <div className="skillBars">
             <div className="skillBar">
                 <div className="skillBarText">
+                    <h2>Learning Assistant</h2>
+                    <p>University of California, Irvine<br></br>
+                    ICS 46 - Data Structures & Algorithms in C++<br></br>
+                    Jan. 2024 – Present<br></br><br></br>    
+                        ● Supports lectures by answering questions for students and explaining complex concepts from lecture or reading<br></br>  
+                        ● Assist in the programming lab by debugging students' code and providing project guidance<br></br>  
+                        ● Participate in Learning Assistant training to improve communication with students</p>
+                </div>
+            </div>
+            <div className="skillBar">
+                <div className="skillBarText">
                     <h2>Mortgage Banker</h2>
                     <p>Mr. Cooper/Ladera Lending <br></br>
-                        Jan. 2020 – Feb. 2021 <br></br><br></br>    
+                        Jan. 2020 – Feb. 2021 <br></br><br></br>  
+                        ● Achieved top loan officer status within the first few months of onboarding, originating over $6,000,000 in monthly sales</p>  
                         ● Addressed challenges, conducted client consultations, and managed a client intake and pipeline of 125+ clients <br></br>  
                         ● Developed a comprehensive Excel-based mortgage calculator to optimize the refinance proposal process, widely used by the  
                             office <br></br>  
-                        ● Nurtured enduring client relationships, resulting in consistent repeat business and top performance</p>
                 </div>
             </div>
             <div className="skillBar">
@@ -49,9 +60,7 @@ const Skills = () => {
                         Dec. 2018 – Dec. 2019 <br></br>
                         <br></br>
                         ● Built photography business from ground up by creating social media brand, website SEO, and client base <br></br>
-                        ● Specialized in wedding, family, and business photography. <br></br>
-                        ● Collaborated with philanthropist, Kwanza Jones, on her music videos and Supercharged brand, establishing connections to
-                        the film industry</p>
+                        ● Specialized in wedding, family, and business photography averaging monthly revenue of $2,500 <br></br></p>
                 </div>
             </div>
             <div className="skillBar">

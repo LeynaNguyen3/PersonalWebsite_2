@@ -3,13 +3,13 @@ import './navbar.css'
 import logo from '../../assets/logo.png'
 import {Link} from 'react-scroll';
 import menu from '../../assets/menu.png'
-import Resume from '../../assets/Leyna_Nguyen_Resume_2023.pdf'
+import Resume from '../../assets/LeynaNguyen_Resume_2024.pdf'
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <nav className="navbar">
-        <a href='intro'className="home-link">
+        <a href='https://leynanguyen3.github.io/PersonalWebsite_2/'className="home-link">
           <img src={logo} alt="logo" className='logo' />
         </a>
         <div className="desktopMenu">
