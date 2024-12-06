@@ -3,7 +3,7 @@ import './navbar.css'
 import logo from '../../assets/logo.png'
 import {Link} from 'react-scroll';
 import menu from '../../assets/menu.png'
-import Resume from '../../assets/LeynaNguyen_Resume_2024.pdf'
+import Resume from '../../assets/Final Resume of 2024.pdf'
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
