@@ -3,7 +3,8 @@ import './navbar.css'
 import logo from '../../assets/logo.png'
 import {Link} from 'react-scroll';
 import menu from '../../assets/menu.png'
-import Resume from '../../assets/Final Resume of 2024.pdf'
+import Resume from '../../assets/Leyna_Nguyen_Resume_Intern.pdf'
+import CoverLetter from '../../assets/Leyna_Nguyen_Cover_Letter.pdf'
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -18,6 +19,7 @@ const Navbar = () => {
             <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem">Portfolio</Link>
             <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className="desktopMenuListItem">Contact</Link>
             <a href={Resume} target="_blank" rel="noopener noreferrer" className="desktopMenuListItem">Resume</a>
+            <a href={CoverLetter} target="_blank" rel="noopener noreferrer" className="desktopMenuListItem">Cover Letter</a>
         </div>
         <button className="desktopMenuBtn" onClick={() => {
           document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
@@ -31,6 +33,7 @@ const Navbar = () => {
             <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Portfolio</Link>
             <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className="listItem" onClick={()=>setShowMenu(false)}>Contact</Link>
             <a href={Resume} target="_blank" rel="noopener noreferrer" className="listItem">Resume</a>
+            <a href={CoverLetter} target="_blank" rel="noopener noreferrer" className="listItem">Cover Letter</a>
         </div>
     </nav>
   )
