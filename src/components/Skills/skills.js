@@ -1,7 +1,9 @@
 import React from 'react';
 import './skills.css';
-import ProgrammingLanguages from '../../assets/programming_languages.png';
-import Tools from '../../assets/Tools.png';
+import ProgrammingLanguages from '../../assets/website_woman_technologist_emoji.png';
+import Tools from '../../assets/website_tool.png';
+import Certificates from '../../assets/website_trophy.png';
+import Activities from '../../assets/website_biking.png';
 
 const aboutMeContent = `
 I am someone who is well-rounded and tenacious. I started my career off in freelance back in 2018 
@@ -32,7 +34,7 @@ const skillsData = [
           "First Aid/AED Certified",
           "University of Helsinki MOOC (Java)"
         ],
-        icon: "📜"
+        icon: Certificates
       },
       {
         category: "Activities",
@@ -42,7 +44,7 @@ const skillsData = [
           "Biked 800 miles through Oregon/Washington (2021)",
           "Top 10 National CelebratingArt Competition (2013)"
         ],
-        icon: "🏆"
+        icon: Activities
       }
 ];
 
