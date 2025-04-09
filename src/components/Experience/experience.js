@@ -95,7 +95,6 @@ const Experience = () => {
                 ) : (
                   exp.company
                 )}<br />
-                {exp.company}<br />
                 {exp.startDate}<br /><br />
                 
                 {exp.responsibilities.map((item, i) => (
