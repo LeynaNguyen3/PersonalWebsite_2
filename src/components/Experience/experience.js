@@ -77,8 +77,6 @@ const experienceData = [
   },
   {
     title: "Teaching Assistant",
-    company: "UCI Department of Computer Science",
-    location: "Irvine, CA",
     startDate: "Jan. 2024 – Dec. 2024",
     subsections: [
       {
@@ -149,7 +147,6 @@ const Experience = () => {
               </>
             )}
             <br />
-            
             {exp.responsibilities?.map((item, i) => (
               <React.Fragment key={i}>
                 ● {item}<br />
