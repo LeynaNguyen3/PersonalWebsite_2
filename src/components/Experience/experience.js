@@ -27,8 +27,6 @@ const experienceData = [
   },
   {
     title: "Researcher",
-    company: "University of California",
-    location: "California",
     startDate: "Aug. 2024 – Present",
     subsections: [
       {
@@ -115,59 +113,66 @@ const experienceData = [
     ]
   },
 ];
+
 const Experience = () => {
+  const renderExperience = (exp, index, isSubsection = false) => {
+    return (
+      <div key={index} className={`experienceBar ${isSubsection ? 'subsection' : ''}`}>
+        <div className="experienceBarText">
+          <h2>{exp.title}</h2>
+          <p>
+          {exp.location && (
+              <>
+                {exp.location}
+                <br />
+              </>
+            )}
+            {exp.company && (
+              exp.companyLink ? (
+                <a 
+                  href={exp.companyLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="companyLink"
+                >
+                  {exp.company}
+                </a>
+              ) : (
+                exp.company
+              )
+            )}
+            {exp.company && exp.location && <br />}
+            {exp.startDate && (
+              <>
+                {exp.startDate}
+                <br />
+              </>
+            )}
+            <br />
+            
+            {exp.responsibilities?.map((item, i) => (
+              <React.Fragment key={i}>
+                ● {item}<br />
+              </React.Fragment>
+            ))}
+          </p>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <section id='experiences'>
       <h1 className="experienceTitle">Work Experience</h1>
       
       <div className="experienceBars">
         {experienceData.map((exp, index) => (
-          <div key={index} className="experienceBar">
-            <div className="experienceBarText">
-              <h2>{exp.title}</h2>
-              <p>
-                {exp.location}<br />
-                {exp.companyLink ? (
-                  <a 
-                    href={exp.companyLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="companyLink"
-                  >
-                    {exp.company}
-                  </a>
-                ) : (
-                  exp.company
-                )}<br />
-                {exp.startDate}
-              
-              {/* Subsections - only render if they exist */}
-              {exp.subsections ? (
-                <div className="experienceSubsections">
-                  {exp.subsections.map((subsection, subIndex) => (
-                    <div key={subIndex} className="subsection">
-                      <h3 className="subsectionTitle">{subsection.title}</h3>
-                      <p>{subsection.location}<br />
-                      {subsection.startDate}</p>
-                      <ul className="subsectionList">
-                        {subsection.responsibilities.map((item, itemIndex) => (
-                          <li key={itemIndex}>{item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                /* Fallback to regular responsibilities if no subsections */
-                <ul className="responsibilitiesList">
-                  {exp.responsibilities.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              )}
-              </p>
-            </div>
-          </div>
+          <React.Fragment key={index}>
+            {renderExperience(exp, index)}
+            {exp.subsections?.map((subExp, subIndex) => (
+              renderExperience(subExp, `${index}-${subIndex}`, true)
+            ))}
+          </React.Fragment>
         ))}
       </div>
     </section>
