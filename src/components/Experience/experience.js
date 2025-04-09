@@ -146,7 +146,7 @@ const Experience = () => {
                 <br />
               </>
             )}
-            <br />
+            {exp.responsibilities?.length > 0 && <br />} {/* Only add break if there are responsibilities */}
             {exp.responsibilities?.map((item, i) => (
               <React.Fragment key={i}>
                 ● {item}<br />

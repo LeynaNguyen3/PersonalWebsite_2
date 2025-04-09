@@ -42,7 +42,7 @@
 /* Subsection specific styles */
 .experienceBar.subsection {
     margin-left: 3rem; /* Increased indentation */
-    background: rgba(26, 13, 48, 0.7); /* Lighter color using opacity */
+    background: rgba(108, 85, 149, 0.7); /* Lighter color using opacity */
     border-left: 3px solid rgba(255, 255, 255, 0.1); /* Subtle left border */
     padding: 1.2rem 1.8rem; /* Slightly smaller padding */
     margin-top: 0.5rem; /* Reduced top margin */
