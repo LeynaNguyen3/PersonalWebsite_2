@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/PersonalWebsite_2/static/css/main.95c3d16a.css",
-    "main.js": "/PersonalWebsite_2/static/js/main.004c0f70.js",
+    "main.css": "/PersonalWebsite_2/static/css/main.802f2955.css",
+    "main.js": "/PersonalWebsite_2/static/js/main.575ae31d.js",
     "static/media/image.png": "/PersonalWebsite_2/static/media/image.2246347b5c96e5cacab6.png",
     "static/media/Leyna_Nguyen_Resume_Intern.pdf": "/PersonalWebsite_2/static/media/Leyna_Nguyen_Resume_Intern.b6b405fd72638d165b42.pdf",
     "static/media/Leyna_Nguyen_Cover_Letter.pdf": "/PersonalWebsite_2/static/media/Leyna_Nguyen_Cover_Letter.f2618a5ecda9062c564c.pdf",
     "static/media/Tools.png": "/PersonalWebsite_2/static/media/Tools.90d5f66d9ac577d91985.png",
     "static/media/logo.png": "/PersonalWebsite_2/static/media/logo.3e5a1c6600549cf76a1b.png",
+    "static/media/website_biking.png": "/PersonalWebsite_2/static/media/website_biking.f4a4e851d4c65b5693d1.png",
     "static/media/menu.png": "/PersonalWebsite_2/static/media/menu.6ece63b91f3e1017ee38.png",
+    "static/media/website_trophy.png": "/PersonalWebsite_2/static/media/website_trophy.ab71d0292bea0e198f4a.png",
+    "static/media/website_tool.png": "/PersonalWebsite_2/static/media/website_tool.5978fa978dbe8db64124.png",
     "static/media/portfolio-1.png": "/PersonalWebsite_2/static/media/portfolio-1.c4103c64494b79cf3b63.png",
-    "static/media/programming_languages.png": "/PersonalWebsite_2/static/media/programming_languages.24a8f93854ab092f17a7.png",
+    "static/media/website_woman_technologist_emoji.png": "/PersonalWebsite_2/static/media/website_woman_technologist_emoji.5ba9e41bb58d162500db.png",
     "static/media/gmail.png": "/PersonalWebsite_2/static/media/gmail.8fc21969c09d93565c9e.png",
     "index.html": "/PersonalWebsite_2/index.html",
-    "main.95c3d16a.css.map": "/PersonalWebsite_2/static/css/main.95c3d16a.css.map",
-    "main.004c0f70.js.map": "/PersonalWebsite_2/static/js/main.004c0f70.js.map"
+    "main.802f2955.css.map": "/PersonalWebsite_2/static/css/main.802f2955.css.map",
+    "main.575ae31d.js.map": "/PersonalWebsite_2/static/js/main.575ae31d.js.map"
   },
   "entrypoints": [
-    "static/css/main.95c3d16a.css",
-    "static/js/main.004c0f70.js"
+    "static/css/main.802f2955.css",
+    "static/js/main.575ae31d.js"
   ]
 }
