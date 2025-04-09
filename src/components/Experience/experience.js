@@ -26,6 +26,35 @@ const experienceData = [
     ]
   },
   {
+    title: "Researcher",
+    company: "University of California",
+    location: "California",
+    startDate: "Aug. 2024 – Present",
+    subsections: [
+      {
+        title: "CS Education Research",
+        location: "University of California, Irvine",
+        startDate: "Jan 2025 - Present",
+        responsibilities: [
+          "Guided lectures for Crumple Trees, a novel binary search tree (BST)",
+          "Supported lectures by answering questions and explaining complex concepts",
+          "Assisted in programming lab by debugging students' code and providing project guidance",
+          "Participated in Teaching Assistant training to improve communication with students"
+        ]
+      },
+      {
+        title: "Lab Research Assistant",
+        location: "University of California, Los Angeles",
+        startDate: "Mar 2024 - Jun 2024",
+        responsibilities: [
+        "Contributed to stroke recovery research at one of the leading neurology labs in the U.S., using AI and machine learning to identify potential drug therapies with a team of 6",
+        "Developed an AI-driven axon regeneration classifier by integrating RNA sequencing data and neuron microscopy images with advanced machine learning algorithms",
+        "Leveraged tools like RegenOrNoRegen, Seurat, NeuroQuantify, and Garnett to optimize the classifier, supporting research aimed at improving recovery outcomes for stroke patients"
+       ]
+      },
+    ]
+  },
+  {
     title: "Lab Research Assistant",
     company: "Hinman Lab",
     location: "Los Angeles, CA",
@@ -53,10 +82,26 @@ const experienceData = [
     company: "UCI Department of Computer Science",
     location: "Irvine, CA",
     startDate: "Jan. 2024 – Dec. 2024",
-    responsibilities: [
-      "Developed/delivered lectures on Data Structures & Algorithms, focusing on concepts such as trees, graphs, and algorithms",
-      "Assisted students in lab projects, guiding them through developing a simple shell in C, dynamic memory allocators, and multithreading using tools like GDB, Vim, and VS Code",
-      "Taught principles of system design in C, including multiprocesses, multithreading, POSIX system calls, and concurrency"
+    subsections: [
+      {
+        title: "Data Structures & Algorithms in C++",
+        startDate: "Jan 2024 - Dec 2024",
+        responsibilities: [
+          "Guided lectures for Crumple Trees, a novel binary search tree (BST)",
+          "Supported lectures by answering questions and explaining complex concepts",
+          "Assisted in programming lab by debugging students' code and providing project guidance",
+          "Participated in Teaching Assistant training to improve communication with students"
+        ]
+      },
+      {
+        title: "Principles in System Design in C",
+        startDate: "Mar 2024 - Jun 2024",
+        responsibilities: [
+          "Assisted students in System Design projects including development of a simple shell in C, dynamic memory allocator, and multithreading",
+          "Instructed students on multi-processes, multithreading, POSIX system calls, and concurrency",
+          "Collaborated with professor weekly to design coursework enhancing student understanding"
+        ]
+      },
     ]
   },
   {
@@ -70,7 +115,6 @@ const experienceData = [
     ]
   },
 ];
-
 const Experience = () => {
   return (
     <section id='experiences'>
@@ -95,13 +139,32 @@ const Experience = () => {
                 ) : (
                   exp.company
                 )}<br />
-                {exp.startDate}<br /><br />
-                
-                {exp.responsibilities.map((item, i) => (
-                  <React.Fragment key={i}>
-                    ● {item}<br />
-                  </React.Fragment>
-                ))}
+                {exp.startDate}
+              
+              {/* Subsections - only render if they exist */}
+              {exp.subsections ? (
+                <div className="experienceSubsections">
+                  {exp.subsections.map((subsection, subIndex) => (
+                    <div key={subIndex} className="subsection">
+                      <h3 className="subsectionTitle">{subsection.title}</h3>
+                      <p>{subsection.location}<br />
+                      {subsection.startDate}</p>
+                      <ul className="subsectionList">
+                        {subsection.responsibilities.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                /* Fallback to regular responsibilities if no subsections */
+                <ul className="responsibilitiesList">
+                  {exp.responsibilities.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              )}
               </p>
             </div>
           </div>
