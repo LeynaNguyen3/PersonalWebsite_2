@@ -1,4 +1,4 @@
-#works {
+#projects {
     margin: 0 auto;
     min-height: calc(100vh - 4rem);
     width: 100vw;
@@ -11,32 +11,33 @@
     padding: 0 1rem;
 }
 
-.worksTitle {
+.projectsTitle {
     margin: 1rem 0;
     font-size: 3rem;
 }
 
-.worksDesc {
+.projectsDesc {
     font-weight: 300;
     font-size: 1rem;
     max-width: 45rem;
 }
 
-.worksImgs {
+.projectsImgs {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100vw;
-    max-width: 65rem;
     flex-wrap: wrap;
-    padding: 2rem;
+    width: 100%;
+    max-width: 65rem;
+    gap: 3rem; /* Reasonable gap between items */
+    padding: 1rem;
 }
 
-.worksImg {
+.projectsImg {
     object-fit: cover;
     height: 20rem;
-    margin: 0.5 rem;
+    width: auto; /* Or set a specific width */
     border-radius: 2rem;
+    margin: 0; /* Remove individual margins - let gap handle spacing */
 }
 
 .text {
@@ -44,7 +45,7 @@
     font-weight: 200;
 }
 
-.worksImg:hover{
+.projectsImg:hover{
     cursor: pointer;
     filter: grayscale(100%);
 }
@@ -58,9 +59,14 @@ a:hover {
     color: aquamarine;
   }
 
-@media screen and (max-width:585px) {
-    .worksImg{
-        height: 48vw;
+  @media screen and (max-width: 768px) {
+    .projectsImgs {
+        gap: 1rem; /* Smaller gap on tablets */
     }
-    
+}
+
+@media screen and (max-width: 480px) {
+    .projectsImgs {
+        gap: 0.75rem; /* Smallest gap on mobile */
+    }
 }
