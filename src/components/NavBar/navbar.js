@@ -14,7 +14,7 @@ const navbarVariants = {
     y: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 1,
       ease: "easeOut"
     }
   }
@@ -32,7 +32,6 @@ const menuItemVariants = {
   }),
   hover: {
     scale: 1.05,
-    color: "#FFD700",
     transition: { duration: 0.2 }
   },
   tap: { scale: 0.95 }
@@ -72,7 +71,6 @@ const mobileMenuItemVariants = {
 const buttonVariants = {
   hover: { 
     scale: 1.05,
-    backgroundColor: "#FFD700",
     color: "#000",
     transition: { duration: 0.2 }
   },
@@ -153,7 +151,7 @@ const Navbar = () => {
         
         <Link 
           activeClass='active' 
-          to='works' 
+          to='projects' 
           spy={true} 
           smooth={true} 
           offset={-50} 
@@ -284,7 +282,7 @@ const Navbar = () => {
             
             <Link 
               activeClass='active' 
-              to='works' 
+              to='projects' 
               spy={true} 
               smooth={true} 
               offset={-50} 

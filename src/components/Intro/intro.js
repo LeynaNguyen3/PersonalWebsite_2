@@ -75,8 +75,9 @@ const Intro = () => {
             with plans to graduate June 2025. I have a passion for learning <br/>
             and am a well-rounded individual always looking to sharpen my skills.
           </p>
-          <div className="gradient-underlay" />
         </motion.div>
+
+        <div className="gradient-underlay" />
         
         <motion.div variants={itemVariants}>
           <Link 
