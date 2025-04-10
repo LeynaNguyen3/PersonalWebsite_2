@@ -106,8 +106,18 @@ const Contact = () => {
         </motion.h1>
         
         <motion.span className="contactDesc" variants={itemVariants}>
-          You can message me here! <a href="mailto:leyna.nguyen619@gmail.com">Or email me here</a>
+          You can message me here!
         </motion.span>
+
+        <motion.a 
+            href="mailto:leyna.nguyen619@gmail.com" 
+            className="contactLink"
+            variants={buttonVariants}
+            whileHover="hover"
+            whileTap="tap"
+            >
+            Or email me here
+        </motion.a>
         
         <motion.form 
           className='contactForm' 
@@ -143,14 +153,7 @@ const Contact = () => {
             type='submit' 
             value='Send' 
             className="submitBtn"
-            variants={{
-                hidden: itemVariants.hidden,
-                visible: {
-                ...itemVariants.visible,
-                hover: buttonVariants.hover,
-                tap: buttonVariants.tap
-                }
-            }}
+            variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
             >
