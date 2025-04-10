@@ -1,9 +1,55 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './skills.css';
 import ProgrammingLanguages from '../../assets/website_woman_technologist_emoji.png';
 import Tools from '../../assets/website_tool.png';
 import Certificates from '../../assets/website_trophy.png';
 import Activities from '../../assets/website_biking.png';
+
+// Animation variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      when: "beforeChildren"
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
+const titleVariants = {
+hidden: { y: -20, opacity: 0 },
+visible: {
+  y: 0,
+  opacity: 1,
+  transition: {
+    duration: 0.5
+  }
+}
+};
+
+const textVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      delay: 0.2
+    }
+  }
+};
 
 const aboutMeContent = `
 I am someone who is well-rounded and tenacious. I started my career off in freelance back in 2018 
@@ -50,28 +96,46 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section id='skills'>
-      <h1 className="skillTitle">About Me</h1>
-      <p className="skillDesc">{aboutMeContent}</p>
+    <motion.section 
+      id='skills'
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      variants={containerVariants}
+    >
+      <motion.h1 className="skillTitle" variants={titleVariants}>
+        About Me
+      </motion.h1>
+      <motion.p className="skillDesc" variants={textVariants}>
+        {aboutMeContent}
+      </motion.p>
       
-      <h1 className="skillTitle">Technical Skills</h1>
+      <motion.h1 className="skillTitle" variants={titleVariants}>
+        Technical Skills
+      </motion.h1>
       
-      <div className="skillBars">
+      <motion.div className="skillBars" variants={containerVariants}>
         {skillsData.map((skill, index) => (
-          <div key={index} className="skillBar">
-            <img 
+          <motion.div 
+            key={index} 
+            className="skillBar"
+            variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
+          >
+            <motion.img 
               src={skill.icon} 
               alt={skill.category} 
-              className="skillBarImg" 
+              className="skillBarImg"
+              whileHover={{ rotate: 5 }}
             />
             <div className="skillBarText">
               <h2>{skill.category}</h2>
               <p>{skill.items.join(', ')}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 

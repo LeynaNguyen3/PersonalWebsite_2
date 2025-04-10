@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './experience.css';
 
 const experienceData = [
@@ -157,23 +158,77 @@ const Experience = () => {
       </div>
     );
   };
-
-  return (
-    <section id='experiences'>
-      <h1 className="experienceTitle">Work Experience</h1>
-      
-      <div className="experienceBars">
-        {experienceData.map((exp, index) => (
-          <React.Fragment key={index}>
-            {renderExperience(exp, index)}
-            {exp.subsections?.map((subExp, subIndex) => (
-              renderExperience(subExp, `${index}-${subIndex}`, true)
-            ))}
-          </React.Fragment>
-        ))}
-      </div>
-    </section>
-  );
+  
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        when: "beforeChildren"
+      }
+    }
+  };
+  
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+  
+const titleVariants = {
+  hidden: { y: -20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
 };
+
+return (
+  <motion.section 
+    id='experiences'
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-100px" }}
+    variants={containerVariants}
+  >
+    <motion.h1 className="experienceTitle" variants={titleVariants}>
+      Work Experience
+    </motion.h1>
+    
+    <motion.div className="experienceBars" variants={containerVariants}>
+      {experienceData.map((exp, index) => (
+        <React.Fragment key={index}>
+          <motion.div variants={itemVariants}>
+          <motion.div 
+            variants={itemVariants}
+            whileHover={{ scale: 1.02 }}
+          >
+            {renderExperience(exp, index)}
+          </motion.div>
+          </motion.div>
+          {exp.subsections?.map((subExp, subIndex) => (
+            <motion.div key={`${index}-${subIndex}`} variants={itemVariants}>
+              <motion.div 
+                variants={itemVariants}
+                whileHover={{ scale: 1.02 }}
+              >
+              {renderExperience(subExp, `${index}-${subIndex}`, true)}
+              </motion.div>
+            </motion.div>
+          ))}
+        </React.Fragment>
+      ))}
+    </motion.div>
+  </motion.section>
+)};
 
 export default Experience;
