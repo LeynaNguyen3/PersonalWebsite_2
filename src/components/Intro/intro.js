@@ -134,11 +134,11 @@ const Intro = () => {
             variants={typingVariants}
           >
             {currentText}
-            <motion.span 
+            {<motion.span 
               className="cursor" 
               variants={cursorVariants}
               animate="blinking"
-            >|</motion.span>
+            ></motion.span>}
           </motion.span>
         </motion.span>
         
