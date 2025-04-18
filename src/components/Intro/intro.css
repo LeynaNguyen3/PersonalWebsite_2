@@ -65,6 +65,21 @@
     box-shadow: 50px 50px 113px #322653 inset,-150px -100px 250px #322653 inset;
   }
 
+  .typing-text {
+    display: inline-block;
+    min-height: 1.5em; /* Ensure consistent height while text changes */
+    position: relative;
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: currentColor;
+    margin-left: 2px;
+    height: 1em;
+    vertical-align: middle;
+  }
+
 @media screen and (max-width:840px){
     .bg {
         height: 40vh;

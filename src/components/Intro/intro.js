@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import './intro.css';
 import bg from '../../assets/image.png';
@@ -52,7 +52,68 @@ const imageVariants = {
   }
 };
 
+const typingVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
+const cursorVariants = {
+  blinking: {
+    opacity: [0, 0, 1, 1],
+    transition: {
+      duration: 1,
+      repeat: Infinity,
+      repeatDelay: 0
+    }
+  }
+};
+
 const Intro = () => {
+  const roles = useMemo(() => [
+    "UCI C.S. Student",
+    "Cyclist",
+    "Tech Enthusiast",
+    "Tutor",
+    "Problem Solver",
+    "Sales Woman",
+    "All-rounder"
+  ], []); 
+
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [currentText, setCurrentText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(150);
+  
+  useEffect(() => {
+    let timer;
+    
+    if (isDeleting) {
+      timer = setTimeout(() => {
+        setCurrentText(currentText.substring(0, currentText.length - 1));
+        setTypingSpeed(75);
+      }, typingSpeed);
+    } else {
+      timer = setTimeout(() => {
+        setCurrentText(roles[currentRoleIndex].substring(0, currentText.length + 1));
+        setTypingSpeed(150);
+      }, typingSpeed);
+    }
+    
+    if (!isDeleting && currentText === roles[currentRoleIndex]) {
+      setTimeout(() => setIsDeleting(true), 1000);
+    } else if (isDeleting && currentText === '') {
+      setIsDeleting(false);
+      setCurrentRoleIndex((currentRoleIndex + 1) % roles.length);
+    }
+    
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, currentRoleIndex, roles, typingSpeed]);
+  
   return (
     <motion.section 
       id="intro"
@@ -67,7 +128,18 @@ const Intro = () => {
         
         <motion.span className="introText" variants={itemVariants}>
           <p className="gradient-element"/>
-          I'm <span className="introName">Leyna</span><br />UCI C.S. Student
+          I'm <span className="introName">Leyna</span>,<br />
+          <motion.span 
+            className="typing-text"
+            variants={typingVariants}
+          >
+            {currentText}
+            <motion.span 
+              className="cursor" 
+              variants={cursorVariants}
+              animate="blinking"
+            >|</motion.span>
+          </motion.span>
         </motion.span>
         
         <motion.div className="introParaContainer" variants={itemVariants}>
