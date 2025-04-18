@@ -4,7 +4,7 @@ import './navbar.css';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-scroll';
 import menu from '../../assets/menu.png';
-import Resume from '../../assets/Leyna_Nguyen_Resume_Intern.pdf';
+import Resume from '../../assets/Leyna_Nguyen_Resume.pdf';
 import CoverLetter from '../../assets/Leyna_Nguyen_Cover_Letter.pdf';
 
 // Animation variants
